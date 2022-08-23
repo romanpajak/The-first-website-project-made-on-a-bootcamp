@@ -124,14 +124,17 @@ font-weight: bold;
     align-items: center;
     justify-content: center;
 }
+.footer .contents{
+    display: flex;
+    align-items: center;
+  
+}
 .footer p{
     color: white;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
-
-
-.footer .contents i{
-    float: right;
+.footer i{
+    align-items: flex-end;
     margin-left: 10px;
 
 }
