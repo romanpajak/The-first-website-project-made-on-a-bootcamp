@@ -1,0 +1,137 @@
+html{
+    scroll-behavior: smooth;
+}
+.contents{
+    width: 960px;
+    margin: 0 auto;
+}
+/* style pierwsze sekcji*/
+.navbar{
+    background: #4E4E4E;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.contents a:nth-child(2),.contents a:nth-child(3), .contents a:nth-child(4){
+    float: right;
+    margin-left: 15px;
+}
+.contents a:nth-child(4):hover{
+    cursor: not-allowed;
+}
+/* style sekcji z banerem*/
+.baner{
+    height: 100vh;
+    background-image: url(/images/nature.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.baner h1, .baner h5, .baner button {
+    color: white;
+}
+button{
+    border: 1px solid white;
+    background-color: transparent;
+    width: 80px;
+    height: 40px;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+button:hover{
+    background: white;
+    color: black;
+    transition: 1s;
+}
+button a:hover{
+    color: black;
+}
+/*style sekcji o specjlistach*/
+.firstImage, .secondImage{
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.firstImage{
+    float: left;
+    margin-right: 20px;
+    background-image:url(/images/face1.png);
+    background-size: cover;
+}
+.secondImage{
+    float: right;
+    margin-left: 20px;
+    background-image:url(/images/face2.png);
+    background-size: cover;
+}
+.secondDepartment{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.title{
+font-weight: bold;
+}
+/*style sekcji o firmie*/
+.contents h1{
+    color: white;
+}
+.box{
+    background:#F1F1F1;
+    height: 198px;
+    width: 193px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.box:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.boxContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+}
+.secondSection{
+    background:#405D78;
+}
+
+.baner h1, .firstSection h1, .secondSection h1,.footer p{
+    margin-top: 0;
+}
+/*style stopki*/
+.footer{
+    background: #4E4E4E;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer p{
+    color: white;
+    margin-bottom: 0
+}
+
+
+.footer .contents i{
+    float: right;
+    margin-left: 10px;
+
+}
