@@ -134,7 +134,9 @@ font-weight: bold;
     margin-bottom: 0;
 }
 .footer i{
-    align-items: flex-end;
     margin-left: 10px;
-
+}
+.socialMedia{
+    display: flex;
+    margin-left: auto;
 }
