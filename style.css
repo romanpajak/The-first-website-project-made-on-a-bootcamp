@@ -1,53 +1,78 @@
+/*general styles*/
+body{
+    font-family: "Roboto";
+}
 html{
     scroll-behavior: smooth;
+}
+h1{
+    font-size: 35px;
 }
 .contents{
     width: 960px;
     margin: 0 auto;
 }
-/* style pierwsze sekcji*/
-.navbar{
+/*menu styles*/
+.menu{
+    height: 70px;
+    width: 100%;
     background: #4E4E4E;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navbar a{
+.menu .contents{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu .contents a{
     text-decoration: none;
     color: white;
 }
-
-.contents a:nth-child(2),.contents a:nth-child(3), .contents a:nth-child(4){
-    float: right;
-    margin-left: 15px;
+.menu .contents a:first-of-type{
+    margin-right: auto;
 }
-.contents a:nth-child(4):hover{
+.menu .contents a:nth-of-type(4){
     cursor: not-allowed;
 }
-/* style sekcji z banerem*/
-.baner{
+.menu .contents a:nth-of-type(2),.menu .contents a:nth-of-type(3),.menu .contents a:nth-of-type(4){
+    margin-left: 10px;
+}
+/*baner styles*/
+.layer{
+    width: 100%;
     height: 100vh;
-    background-image: url(/images/nature.jpg);
-    background-size: cover;
+    background: transparent;
+    opacity: 1;
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
-
+.baner{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/nature.jpg");
+    background-size: cover;
+}
 .baner h1, .baner h5, .baner button {
     color: white;
 }
+.baner h1{
+    margin-bottom: 20px;
+}
+.baner h5{
+    margin: 40px 0;
+}
 button{
+    width: 135px;
+    height: 40px;
     border: 1px solid white;
     background-color: transparent;
-    width: 80px;
-    height: 40px;
+    cursor: pointer;
 }
-button a{
-    text-decoration: none;
-    color: white;
-}
+
 button:hover{
     background: white;
     color: black;
@@ -56,35 +81,63 @@ button:hover{
 button a:hover{
     color: black;
 }
-/*style sekcji o specjlistach*/
-.firstImage, .secondImage{
+/* second section styles */
+.secondSection{
+    width: 100%;
+    height: auto;
+}
+.secondSection h1{
+    margin: 40px 0;
+}
+.photo{
     height: 150px;
     width: 150px;
-    border: 1px solid black;
+    border: 1px solid #405D78;
     border-radius: 100%;
 }
-.firstImage{
-    float: left;
-    margin-right: 20px;
+.photo.firstImage{
     background-image:url(/images/face1.png);
     background-size: cover;
 }
-.secondImage{
-    float: right;
-    margin-left: 20px;
+.photo.secondImage{
     background-image:url(/images/face2.png);
     background-size: cover;
+}  
+.workers{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}  
+.workers:nth-of-type(odd) div.photo{
+    order:0;
+    margin-right: 40px;
 }
-.secondDepartment{
-    margin-top: 80px;
-    margin-bottom: 80px;
+.workers:nth-of-type(even) div.photo{
+    order:1;
+    margin-left: 40px;
 }
-.title{
-font-weight: bold;
+.workers:nth-of-type(even) .description{
+    text-align: right;
 }
-/*style sekcji o firmie*/
-.contents h1{
+.description{
+    width: 800px;
+}
+.subtitle{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* third section styles */
+.thirdSection{
+    width:100%;
+    height: auto;
+    background: #405D78;
+}
+.thirdSection h1{
     color: white;
+    margin: 40px 0;
+    padding-top: 40px;
 }
 .box{
     background:#F1F1F1;
@@ -94,6 +147,15 @@ font-weight: bold;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    box-sizing:content-box;
+}
+.textContainer *{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .box:hover{
     transform: scale(1.05);
@@ -109,25 +171,34 @@ font-weight: bold;
     height: auto;
     margin: 0 auto;
 }
-.secondSection{
-    background:#405D78;
+.box{
+    font-size: larger;
+}
+.circle{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    background: #E07A64;
+    border-radius: 100%;
+    top: -100px;
+    left: -130px;
+}
+.span{
+    font-size:smaller;
 }
 
-.baner h1, .firstSection h1, .secondSection h1,.footer p{
-    margin-top: 0;
-}
-/*style stopki*/
+/* footer styles */
 .footer{
-    background: #4E4E4E;
     height: 70px;
+    width: 100%;
+    background: #4E4E4E;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .footer .contents{
     display: flex;
-    align-items: center;
-  
+    align-items: center; 
 }
 .footer p{
     color: white;
@@ -139,4 +210,4 @@ font-weight: bold;
 .socialMedia{
     display: flex;
     margin-left: auto;
-}
+} 
