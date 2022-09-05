@@ -5,12 +5,16 @@ body{
 html{
     scroll-behavior: smooth;
 }
-h1{
+h1, h2{
     font-size: 35px;
 }
 .contents{
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
+    width: 100%;
+}
+section{
+    padding: 10px;
 }
 /*menu styles*/
 .menu{
@@ -35,7 +39,7 @@ h1{
 .menu .contents a:nth-of-type(4){
     cursor: not-allowed;
 }
-.menu .contents a:nth-of-type(2),.menu .contents a:nth-of-type(3),.menu .contents a:nth-of-type(4){
+.menu .contents :not(a:nth-of-type(1)){
     margin-left: 10px;
 }
 /*baner styles*/
@@ -65,7 +69,7 @@ h1{
 .baner h5{
     margin: 40px 0;
 }
-button{
+.btn{
     width: 135px;
     height: 40px;
     border: 1px solid white;
@@ -73,20 +77,17 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn:hover{
     background: white;
     color: black;
     transition: 1s;
-}
-button a:hover{
-    color: black;
 }
 /* second section styles */
 .secondSection{
     width: 100%;
     height: auto;
 }
-.secondSection h1{
+.secondSection h2{
     margin: 40px 0;
 }
 .photo{
@@ -94,14 +95,13 @@ button a:hover{
     width: 150px;
     border: 1px solid #405D78;
     border-radius: 100%;
+    background-size: cover;
 }
 .photo.firstImage{
     background-image:url(/images/face1.png);
-    background-size: cover;
 }
 .photo.secondImage{
     background-image:url(/images/face2.png);
-    background-size: cover;
 }  
 .workers{
     width: auto;
@@ -110,11 +110,10 @@ button a:hover{
     align-items: center;
     margin: 20px 0;
 }  
-.workers:nth-of-type(odd) div.photo{
-    order:0;
+.workers:nth-of-type(odd) .photo{
     margin-right: 40px;
 }
-.workers:nth-of-type(even) div.photo{
+.workers:nth-of-type(even) .photo{
     order:1;
     margin-left: 40px;
 }
@@ -134,10 +133,9 @@ button a:hover{
     height: auto;
     background: #405D78;
 }
-.thirdSection h1{
+.thirdSection h2{
     color: white;
     margin: 40px 0;
-    padding-top: 40px;
 }
 .box{
     background:#F1F1F1;
@@ -148,14 +146,12 @@ button a:hover{
     justify-content: center;
     margin-bottom: 30px;
     box-sizing:content-box;
+    font-size: larger;
 }
-.textContainer *{
+.textContainer {
     height: auto;
     width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    display: block;
 }
 .box:hover{
     transform: scale(1.05);
@@ -171,9 +167,6 @@ button a:hover{
     height: auto;
     margin: 0 auto;
 }
-.box{
-    font-size: larger;
-}
 .circle{
     height: 20px;
     width: 20px;
@@ -181,12 +174,12 @@ button a:hover{
     background: #E07A64;
     border-radius: 100%;
     top: -100px;
-    left: -130px;
+    left: -134px;
 }
-.span{
+.text-smaller{
     font-size:smaller;
+    text-align: center;
 }
-
 /* footer styles */
 .footer{
     height: 70px;
@@ -210,4 +203,7 @@ button a:hover{
 .socialMedia{
     display: flex;
     margin-left: auto;
+}
+.fa.fa-facebook-square.fa-2x, .fa.fa-instagram.fa-2x {
+    color: white;
 } 
