@@ -75,12 +75,12 @@ section{
     border: 1px solid white;
     background-color: transparent;
     cursor: pointer;
+    transition: 1s;
 }
 
 .btn:hover{
     background: white;
     color: black;
-    transition: 1s;
 }
 /* second section styles */
 .secondSection{
@@ -147,6 +147,10 @@ section{
     margin-bottom: 30px;
     box-sizing:content-box;
     font-size: larger;
+    transition: 0.5s;
+}
+.box:nth-of-type(1){
+    position: relative;
 }
 .textContainer {
     height: auto;
@@ -155,7 +159,6 @@ section{
 }
 .box:hover{
     transform: scale(1.05);
-    transition: 0.5s;
     cursor: pointer;
 }
 .boxContainer{
@@ -170,11 +173,11 @@ section{
 .circle{
     height: 20px;
     width: 20px;
-    position: relative;
+    position: absolute;
     background: #E07A64;
     border-radius: 100%;
-    top: -100px;
-    left: -134px;
+    top: -8px;
+    left: -10px;
 }
 .text-smaller{
     font-size:smaller;
